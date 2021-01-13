@@ -9,11 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var currency:Currency!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        DispatchQueue.global().async {
+            
+            RatesFetcher.fetch.CurrencyConveter { [unowned self](rates) in
+                self.currency = rates
+                
+                print("current rates for USA is", rates.USD)
+                
+            }
+            
+        }
+       }
     }
 
-
-}
-
+    
