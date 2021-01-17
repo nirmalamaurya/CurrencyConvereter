@@ -15,6 +15,7 @@
 		581C693825AEC6C2004ECFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581C693625AEC6C2004ECFBC /* LaunchScreen.storyboard */; };
 		581C694625AEC8C4004ECFBC /* RatesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C694525AEC8C4004ECFBC /* RatesFetcher.swift */; };
 		581C694A25AEC8E8004ECFBC /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C694925AEC8E8004ECFBC /* Currency.swift */; };
+		581C694E25AECB16004ECFBC /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C694D25AECB16004ECFBC /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		581C693925AEC6C2004ECFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		581C694525AEC8C4004ECFBC /* RatesFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesFetcher.swift; sourceTree = "<group>"; };
 		581C694925AEC8E8004ECFBC /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		581C694D25AECB16004ECFBC /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		581C692A25AEC6BB004ECFBC /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				581C694C25AECB01004ECFBC /* Utility */,
 				581C694825AEC8D6004ECFBC /* Model */,
 				581C694425AEC885004ECFBC /* RatesFetcherAPI */,
 				581C692B25AEC6BB004ECFBC /* AppDelegate.swift */,
@@ -87,6 +90,14 @@
 				581C694925AEC8E8004ECFBC /* Currency.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		581C694C25AECB01004ECFBC /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				581C694D25AECB16004ECFBC /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 			files = (
 				581C693025AEC6BB004ECFBC /* ViewController.swift in Sources */,
 				581C694A25AEC8E8004ECFBC /* Currency.swift in Sources */,
+				581C694E25AECB16004ECFBC /* Utility.swift in Sources */,
 				581C694625AEC8C4004ECFBC /* RatesFetcher.swift in Sources */,
 				581C692C25AEC6BB004ECFBC /* AppDelegate.swift in Sources */,
 				581C692E25AEC6BB004ECFBC /* SceneDelegate.swift in Sources */,

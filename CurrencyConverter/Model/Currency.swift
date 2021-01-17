@@ -12,8 +12,14 @@ enum CurrencyTypes: String, CaseIterable{
     case  EUR = "EUR"
     case  GBP = "GBP"
     case  JPY = "JPY"
-
     
+     static func getCurriencies ()->[String]{
+        var curriencies = [String]()
+        for currency in CurrencyTypes.allCases{
+            curriencies.append(currency.rawValue)
+        }
+        return curriencies
+    }
 }
 struct Currency:Codable {
     
@@ -25,7 +31,7 @@ struct Currency:Codable {
 
 }
 
-struct FetchedData:Codable {
+struct CurrencyData:Codable {
     let rates:Currency
 }
 
