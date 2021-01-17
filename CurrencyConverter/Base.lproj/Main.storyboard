@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-dl-X49">
-                                <rect key="frame" x="20" y="610" width="374" height="69"/>
+                                <rect key="frame" x="20" y="754" width="374" height="69"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -35,22 +36,22 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bK8-yF-bln">
-                                <rect key="frame" x="10" y="410" width="394" height="98"/>
+                                <rect key="frame" x="10" y="410" width="394" height="116"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFK-9g-0fZ">
-                                        <rect key="frame" x="2" y="2" width="390" height="94"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="2" y="2" width="390" height="114"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="94" id="ehI-FY-MVD"/>
+                                            <constraint firstAttribute="height" constant="114" id="3ky-l4-xxE"/>
                                         </constraints>
                                     </pickerView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
-                                    <constraint firstItem="SFK-9g-0fZ" firstAttribute="top" secondItem="bK8-yF-bln" secondAttribute="top" constant="2" id="DcS-J6-fNh"/>
-                                    <constraint firstAttribute="trailing" secondItem="SFK-9g-0fZ" secondAttribute="trailing" constant="2" id="RwG-IV-bwb"/>
-                                    <constraint firstAttribute="bottom" secondItem="SFK-9g-0fZ" secondAttribute="bottom" constant="2" id="c6J-gZ-evS"/>
-                                    <constraint firstItem="SFK-9g-0fZ" firstAttribute="leading" secondItem="bK8-yF-bln" secondAttribute="leading" constant="2" id="pqQ-sb-Hbs"/>
+                                    <constraint firstItem="SFK-9g-0fZ" firstAttribute="centerX" secondItem="bK8-yF-bln" secondAttribute="centerX" id="QS2-J0-nfr"/>
+                                    <constraint firstAttribute="bottom" secondItem="SFK-9g-0fZ" secondAttribute="bottom" id="TYe-eS-NDp"/>
+                                    <constraint firstItem="SFK-9g-0fZ" firstAttribute="leading" secondItem="bK8-yF-bln" secondAttribute="leading" constant="2" id="cSQ-Va-SEb"/>
+                                    <constraint firstItem="SFK-9g-0fZ" firstAttribute="top" secondItem="bK8-yF-bln" secondAttribute="top" constant="2" id="oVu-dn-zwB"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="70p-C6-jb0">
@@ -99,7 +100,7 @@
                             <constraint firstItem="bK8-yF-bln" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UUn-r8-w4n"/>
                             <constraint firstItem="ETx-o1-ERh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.2" id="Xwt-fi-wev"/>
                             <constraint firstItem="C8Y-Pj-GWT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="dWJ-HO-6gn"/>
-                            <constraint firstItem="hVv-dl-X49" firstAttribute="top" secondItem="bK8-yF-bln" secondAttribute="bottom" multiplier="1.2" id="ed1-WW-fhJ"/>
+                            <constraint firstItem="hVv-dl-X49" firstAttribute="top" secondItem="bK8-yF-bln" secondAttribute="bottom" multiplier="1.2" constant="122.80000000000007" id="ed1-WW-fhJ"/>
                             <constraint firstItem="70p-C6-jb0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ju6-5I-WaD"/>
                             <constraint firstAttribute="trailing" secondItem="C8Y-Pj-GWT" secondAttribute="trailing" constant="10" id="lnG-Od-pqE"/>
                             <constraint firstItem="ETx-o1-ERh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mia-AL-gT6"/>
@@ -123,5 +124,11 @@
     </scenes>
     <resources>
         <image name="Logo" width="191" height="20"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

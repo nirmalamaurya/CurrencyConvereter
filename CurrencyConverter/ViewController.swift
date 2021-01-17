@@ -12,7 +12,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var convertedAmount: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
-
     @IBOutlet weak var dottedView: UIView!
 
     var currency:Currency!
@@ -21,10 +20,14 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currencyPicker.delegate = self
-        currencyPicker.dataSource = self
-        dottedView.createDottedLine(width: 3, color: UIColor.black.cgColor)
         
+        createDottedLine()
+        setUpCurrencyPickerView()
+        callCFetcherAPI()
+       
+       }
+    
+    func callCFetcherAPI(){
         DispatchQueue.global().async {
            RatesFetcher .fetch.CurrencyConveter { [unowned self](rates) in
                 self.currency = rates
@@ -36,15 +39,29 @@ class ViewController: UIViewController, UIPickerViewDelegate {
                 }
             }
           }
-       }
-    
+    }
 
+    func createDottedLine(){
+        dottedView.createDottedLine(width: 3, color: UIColor.black.cgColor)
+
+    }
+    func setUpCurrencyPickerView(){
+        let rotationAngle: CGFloat! = -90  * (.pi/180)
+        currencyPicker.delegate = self
+        currencyPicker.dataSource = self
+        
+        currencyPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        currencyPicker.frame = CGRect(x: -150, y: 100.0, width: self.dottedView.bounds.width + 300, height: 200)
+
+    }
+    
 func selectCurrency()->CurrencyTypes.RawValue{
   
     let selected = CurrencyTypes.USD
     return selected.rawValue
     
 }
+
 
 func ConvertFromAUD(to selectedCurrencyType:CurrencyTypes )->Double{
     
@@ -82,23 +99,24 @@ func numberOfComponents(in pickerView: UIPickerView) -> Int {
 }
 func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     
-    
-    print("Curr",curriencies)
-   return curriencies.count
+    return curriencies.count
 }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
     let modeView = UIView()
     modeView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
     let modeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-    modeLabel.textColor = .yellow
+    modeLabel.textColor = .white
     modeLabel.text = curriencies[row]
+        
+
     modeLabel.textAlignment = .center
     modeView.addSubview(modeLabel)
+    modeView.transform = CGAffineTransform(rotationAngle: 90 * (.pi/180))
     return modeView
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-      return 94
+      return 60
     }
 }
