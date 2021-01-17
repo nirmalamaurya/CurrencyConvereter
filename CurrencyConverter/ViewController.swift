@@ -12,6 +12,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var convertedAmount: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
 
     @IBOutlet weak var dottedView: UIView!
 
@@ -82,8 +84,6 @@ func numberOfComponents(in pickerView: UIPickerView) -> Int {
 }
 func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     
-    
-    print("Curr",curriencies)
    return curriencies.count
 }
     
@@ -101,4 +101,14 @@ func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: I
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
       return 94
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        
+    let selectedValue = curriencies[row]
+        
+        print("selected Value",selectedValue)
+    }
 }
+
+

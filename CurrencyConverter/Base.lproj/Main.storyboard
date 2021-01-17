@@ -86,6 +86,10 @@
                                     <constraint firstAttribute="trailing" secondItem="WFq-sY-ybG" secondAttribute="trailing" id="k1v-t2-ken"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="V4y-Mu-KkC">
+                                <rect key="frame" x="188" y="429" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.23384326699999999" green="0.81162291769999995" blue="0.50191420320000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
