@@ -99,7 +99,8 @@ extension ViewController: UIPickerViewDataSource{
         let modeView = UIView()
         modeView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         let modeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        modeLabel.textColor = .yellow
+        modeLabel.textColor = .white
+        modeLabel.font = UIFont(name: "Helvetica-Bold", size: 40)
         modeLabel.text = curriencies[row].rawValue
         modeLabel.textAlignment = .center
         modeView.addSubview(modeLabel)
