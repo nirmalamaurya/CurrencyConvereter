@@ -54,15 +54,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         dottedView.createDottedLine(width: 3, color: UIColor.black.cgColor)
     }
     
-    func getSelected()->CurrencyTypes.RawValue{
-        
-        let selected = CurrencyTypes.USD
-        return selected.rawValue
-        
-    }
-    
-    
-    
     func ConvertFromAUD(to selectedCurrencyType:CurrencyTypes ){
         
         var multiplier  = 0.0
@@ -122,8 +113,6 @@ extension ViewController: UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         let selectedValue = curriencies[row]
-        print("selected Value",selectedValue)
-        
         ConvertFromAUD(to: selectedValue)
 
         

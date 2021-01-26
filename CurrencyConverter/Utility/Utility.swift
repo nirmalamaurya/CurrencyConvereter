@@ -7,6 +7,10 @@
 
 import UIKit
 
+let APIKey = "6266d2a41a5950256313b48515b22ed2"
+let baseURL = "http://data.fixer.io/api/latest"
+
+
 extension UIView {
    func createDottedLine(width: CGFloat, color: CGColor) {
       let caShapeLayer = CAShapeLayer()
