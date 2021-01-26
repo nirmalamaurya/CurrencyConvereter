@@ -13,15 +13,16 @@ class RatesFetcher{
     let baseURL = "http://data.fixer.io/api/latest"
     
    lazy var urlSymbols:String = {
-    
     var curriencies = CurrencyTypes.getCurriencies()
-        return curriencies.joined(separator: ",")
+    return curriencies.map{ $0.rawValue }.joined(separator: ",")
     }()
     
  static  let fetch = RatesFetcher()
     
     private init(){}
     
+
+        
     func CurrencyConveter(handler:@escaping(Currency)->()){
         
         

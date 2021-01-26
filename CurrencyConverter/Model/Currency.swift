@@ -13,10 +13,10 @@ enum CurrencyTypes: String, CaseIterable{
     case  GBP = "GBP"
     case  JPY = "JPY"
     
-     static func getCurriencies ()->[String]{
-        var curriencies = [String]()
+     static func getCurriencies ()->( [CurrencyTypes]){
+        var curriencies = [CurrencyTypes]()
         for currency in CurrencyTypes.allCases{
-            curriencies.append(currency.rawValue)
+            curriencies.append(currency)
         }
         return curriencies
     }

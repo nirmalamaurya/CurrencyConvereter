@@ -21,8 +21,8 @@
                                     <constraint firstAttribute="height" constant="20" id="mmm-Hd-aPR"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-dl-X49">
-                                <rect key="frame" x="20" y="610" width="374" height="69"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-dl-X49">
+                                <rect key="frame" x="20" y="610" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -86,9 +86,12 @@
                                     <constraint firstAttribute="trailing" secondItem="WFq-sY-ybG" secondAttribute="trailing" id="k1v-t2-ken"/>
                                 </constraints>
                             </stackView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="V4y-Mu-KkC">
-                                <rect key="frame" x="188" y="429" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="V4y-Mu-KkC">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="4Bf-EC-b4B"/>
+                                    <constraint firstAttribute="height" constant="50" id="c8B-0w-Iz9"/>
+                                </constraints>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -102,6 +105,8 @@
                             <constraint firstItem="hVv-dl-X49" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NUI-E8-fXh"/>
                             <constraint firstItem="bK8-yF-bln" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UUn-r8-w4n"/>
                             <constraint firstItem="ETx-o1-ERh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.2" id="Xwt-fi-wev"/>
+                            <constraint firstItem="V4y-Mu-KkC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bFR-n8-MFX"/>
+                            <constraint firstItem="V4y-Mu-KkC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bZt-kD-JP0"/>
                             <constraint firstItem="C8Y-Pj-GWT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="dWJ-HO-6gn"/>
                             <constraint firstItem="hVv-dl-X49" firstAttribute="top" secondItem="bK8-yF-bln" secondAttribute="bottom" multiplier="1.2" id="ed1-WW-fhJ"/>
                             <constraint firstItem="70p-C6-jb0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ju6-5I-WaD"/>
@@ -114,6 +119,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="V4y-Mu-KkC" id="5Ov-Gs-T5g"/>
                         <outlet property="amountField" destination="dJc-Lg-XCQ" id="jiV-b0-ync"/>
                         <outlet property="convertedAmount" destination="hVv-dl-X49" id="Vza-ca-LNS"/>
                         <outlet property="currencyPicker" destination="SFK-9g-0fZ" id="chQ-Uq-xvO"/>
